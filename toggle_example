@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Titulo del Documento</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div id="comentario_1" class="panel-body">
+               Basic Panel example
+             </div>
+          </div>   
+           <button id="eliminar_1" type="button" class="btn btn-danger">HIDE</button> 
+     
+        </div>    
+
+ 
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div id="comentario_2" class="panel-body">
+               Basic Panel example
+            </div>
+          </div>   
+           <button id="eliminar_2" type="button" class="btn btn-success">SHOW</button> 
+        </div>    
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div id="comentario_3" class="panel-body">
+               Basic Panel example
+             </div>
+          </div>   
+          <button id="eliminar_3" type="button" class="btn btn-info">FADETOGGLE</button>      
+        </div>
+      </div>
+  </div>
+  <br>
+  <br>
+  <br>
+
+
+    <div class="container">
+      <div class="row">        
+        <div class="col-sm-4">
+          <button id="button" type="button" class="btn btn-primary">TOGGLE</button>    
+         
+              <p style="display: none">Hola</p>
+         </div>
+         <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div id="comentario_4" class="panel-body">
+               Basic Panel example
+             </div>
+          </div>   
+          <button id="eliminar_4" type="button" class="btn btn-warning">SLIDEUP</button>      
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      $('#eliminar_1').click (function (event){
+    
+         $('#comentario_1').hide(5000);
+        
+      });
+
+    $('#eliminar_2').click (function (event){
+    
+         $('#comentario_2').toggle("");
+        
+      });
+
+    $( "#button" ).click(function() {
+        $( "p" ).toggle();
+      });
+
+    $('#eliminar_3').click (function (event){
+    
+        $('#comentario_3').fadeToggle();
+        
+      });
+
+    $('#eliminar_4').click (function (event){
+    
+        $('#comentario_4').slideUp();
+        
+      });
+
+
+    </script>
+  </body>
+</html>
